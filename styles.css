@@ -112,37 +112,19 @@ footer {
     box-sizing: border-box;
     text-align: center;
 }
+@media (min-width: 600px) {
+  .grid-item .title {
+        font-size: 14px;
+/*         大屏幕时增大字体 */} */
 
-@media (max-width: 600px) {
-    header {
+     header {
         flex-direction: row; /* 水平排列 */
         justify-content: space-between; /* 左右对齐 */
         align-items: center;
     }
 
-    nav ul {
-        margin-top: 0; /* 去掉顶部间距 */
-        flex-direction: row; /* 水平排列 */
-    }
 
-    nav ul li {
-        margin: 0 10px; /* 左右间距 */
-    }
-
-    main {
-        width: 95%; /* 进一步调整主要内容宽度 */
-        .grid-item .title {
-        font-size: 14px;
-        /* 大屏幕时增大字体 */
-    }
 }
-
-/* @media (min-width: 600px) { */
-    
-/*     .grid-item .title {
-        font-size: 14px;
-        /* 大屏幕时增大字体 */} */
-/* } */
 
 @media (min-width: 900px) {
     .grid-item .title {
