@@ -65,13 +65,8 @@ main {
 }
 
 .pagination {
-    margin-top: 5px;
+    margin-top: 40px; /* 增加 margin-top 以确保分页按钮在动态生成内容的下方 */
     text-align: center;
-    position: sticky;
-    bottom: 0;
-    background-color: white; /* 确保背景色与页面背景一致 */
-    z-index: 10; /* 确保分页按钮在内容的上方 */
-}
 }
 
 .pagination button {
