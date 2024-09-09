@@ -1,10 +1,12 @@
 /* 基础样式 */
+/* 确保body和html占满整个视口 */
 html, body {
     height: 100%;
     margin: 0;
     font-family: Arial, sans-serif;
 }
 
+/* 使用flexbox布局，使main内容占满剩余空间 */
 body {
     display: flex;
     flex-direction: column;
@@ -50,7 +52,7 @@ nav ul li a {
 }
 
 main {
-      flex: 1; /* 使main内容占满剩余空间 */
+    flex: 1 0 auto; /* 使main内容占满剩余空间，但允许内容不足时自动扩展 */
     padding: 20px;
 }
 
@@ -85,6 +87,7 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
+    flex-shrink: 0; /* 防止footer收缩 */
 }
 
 footer {
