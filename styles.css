@@ -131,15 +131,18 @@ footer {
 
     main {
         width: 95%; /* 进一步调整主要内容宽度 */
-    }
-}
-
-@media (min-width: 600px) {
-    .grid-item .title {
+        .grid-item .title {
         font-size: 14px;
         /* 大屏幕时增大字体 */
     }
 }
+
+/* @media (min-width: 600px) { */
+    
+/*     .grid-item .title {
+        font-size: 14px;
+        /* 大屏幕时增大字体 */} */
+/* } */
 
 @media (min-width: 900px) {
     .grid-item .title {
