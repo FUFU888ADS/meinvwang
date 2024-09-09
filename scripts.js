@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // 图片路径、标题、链接的数组
     const images = [
 
-        { src: '/chiguawangzhan/image/川航的极品空姐周娅菲，以天使般的外貌和魔鬼般的身材吸引了无数人的目光/1.jpg', title: '川航的极品空姐周娅菲，以天使般的外貌和魔鬼般的身材吸引了无数人的目光', link: '/chiguawangzhan/xiangqingye/川航的极品空姐周娅菲，以天使般的外貌和魔鬼般的身材吸引了无数人的目光.html' },
+        { src: 'chiguawangzhan/image/川航的极品空姐周娅菲，以天使般的外貌和魔鬼般的身材吸引了无数人的目光/1.jpg', title: '川航的极品空姐周娅菲，以天使般的外貌和魔鬼般的身材吸引了无数人的目光', link: '/chiguawangzhan/xiangqingye/川航的极品空姐周娅菲，以天使般的外貌和魔鬼般的身材吸引了无数人的目光.html' },
         { src: '/chiguawangzhan/image/抖音女网红胖乐因其火辣的身材和甜美的面容赢得了大量粉丝的喜爱/5.jpg', alt: '抖音女网红胖乐因其火辣的身材和甜美的面容赢得了大量粉丝的喜爱', link: '/chiguawangzhan/xiangqingye/抖音女网红胖乐因其火辣的身材和甜美的面容赢得了大量粉丝的喜爱.html' },
         { src: '/chiguawangzhan/image/近日，江苏无锡新吴区上品花园的一位 95 后美女业主李漫漫因为偷情事件引发了广泛热议/6.jpg', alt: '近日，江苏无锡新吴区上品花园的一位 95 后美女业主李漫漫因为偷情事件引发了广泛热议', link: '/chiguawangzhan/xiangqingye/近日，江苏无锡新吴区上品花园的一位 95 后美女业主李漫漫因为偷情事件引发了广泛热议.html' },
         { src: '/chiguawangzhan/image/近日，一段河南许昌学院女大学生秦静雯的裸聊视频在网络上疯传/6.jpg', alt: '近日，一段河南许昌学院女大学生秦静雯的裸聊视频在网络上疯传', link: '/chiguawangzhan/xiangqingye/近日，一段河南许昌学院女大学生秦静雯的裸聊视频在网络上疯传.html' },
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { src: '/chiguawangzhan/image/台湾新晋人气网黄路奈（lu9petitepie）因其性感大胆的私拍视频走红/6.jpg', alt: '台湾新晋人气网黄路奈（lu9petitepie）因其性感大胆的私拍视频走红7', link: '/chiguawangzhan/xiangqingye/台湾新晋人气网黄路奈（lu9petitepie）因其性感大胆的私拍视频走红.html' },
         { src: 'title-image3.jpg', alt: '详情页标题图片8', link: 'detail-page3.html' },
         { src: 'title-image4.jpg', alt: '详情页标题图片9', link: 'detail-page4.html' },
-        { src: 'title-image5.jpg', alt: '详情页标题图片10', link: 'detail-page5.html' },
+        { src: 'title-image5.jpg', alt: '详情页标题图片10', link: 'detail-page5.html' },    
 
 
 
