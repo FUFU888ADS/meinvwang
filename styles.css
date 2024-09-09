@@ -1,0 +1,150 @@
+/* 基础样式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* 全局去掉链接下划线 */
+a {
+    text-decoration: none;
+}
+
+header {
+    background-color: #4a4a4a;
+    /* 高级灰 */
+    padding: 10px 20px;
+    color: white;
+    display: flex;
+    /* 使用Flexbox布局 */
+    justify-content: space-between;
+    /* 标题和导航栏分别位于两端 */
+    align-items: center;
+    /* 垂直居中对齐 */
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* 使用Flexbox布局 */
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+}
+
+main {
+    padding: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* 默认四行五列 */
+    gap: 10px;
+}
+
+
+.grid-container img {
+    width: 100%;
+    /* 图片宽度占满网格单元格 */
+    height: auto;
+    /* 高度自适应，保持图片比例 */
+    display: block;
+    /* 去除图片底部空白 */
+}
+
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pagination button {
+    padding: 10px 20px;
+    margin: 0 10px;
+}
+
+footer {
+    background-color: #4a4a4a;
+    /* 高级灰 */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+
+.grid-item {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.grid-item .title {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 12px;
+    /* 可以根据需要调整 */
+    padding: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+@media (min-width: 600px) {
+    .grid-item .title {
+        font-size: 14px;
+        /* 大屏幕时增大字体 */
+    }
+}
+
+@media (min-width: 900px) {
+    .grid-item .title {
+        font-size: 16px;
+        /* 更大屏幕时再增大字体 */
+    }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        /* 手机上两列 */
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin-right: 10px;
+    }
+
+}
