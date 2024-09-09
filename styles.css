@@ -41,9 +41,11 @@ nav ul li {
 
 nav ul li a {
     color: white;
+    text-decoration: none;
 }
 
 main {
+      flex: 1; /* 使main内容占满剩余空间 */
     padding: 20px;
 }
 
@@ -70,8 +72,14 @@ main {
 }
 
 .pagination button {
-    padding: 10px 20px;
     margin: 0 10px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
 }
 
 footer {
