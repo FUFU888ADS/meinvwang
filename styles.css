@@ -80,13 +80,9 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
-/*     position: fixed; */
+    position: fixed; 
     width: 100%;
-    bottom: 0;
-
-     position: sticky;
-    background-color: #fff; /* 确保背景色与页面背景色一致 */
-    
+    bottom: 0;   
 }
 
 
