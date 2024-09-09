@@ -95,7 +95,7 @@ footer {
 
 .grid-item img {
     width: 100%;
-    height: auto;
+    height: 10px;
     display: block;
 }
 
