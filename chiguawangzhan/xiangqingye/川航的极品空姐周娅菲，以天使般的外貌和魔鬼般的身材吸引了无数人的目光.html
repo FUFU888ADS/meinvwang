@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>详情页</title>
+    <style>
+        /* 全局样式 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        /* 头部样式 */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 10px 20px;
+            background-color: #f8f8f8;
+            border-bottom: 1px solid #ddd;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* 主要内容样式 */
+        main {
+            width: 80%;
+            max-width: 800px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        main h2 {
+            margin-bottom: 20px;
+        }
+
+        main p {
+            text-indent: 2em;
+            /* 段落首行缩进2个字符 */
+            margin-bottom: 20px;
+        }
+
+        /* 图片容器样式 */
+        #image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #image-container img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        /* 视频样式 */
+        video {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* 底部信息样式 */
+        footer {
+            width: 100%;
+            padding: 10px 20px;
+            background-color: #f8f8f8;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        /* 媒体查询，用于手机自适应 */
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul {
+                margin-top: 10px;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            main {
+                width: 95%;
+                /* 进一步调整主要内容宽度 */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>吃瓜网站</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="#">分类</a></li>
+                <li><a href="#">用户中心</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="detail-page">
+            <h2>川航的极品空姐周娅菲，以天使般的外貌和魔鬼般的身材吸引了无数人的目光</h2>
+            <p></p>
+            <div id="image-container">
+                <!-- 图片和段落将通过JavaScript动态加载 -->
+            </div>
+            <video controls>
+                <source src="/chiguawangzhan/image/川航的极品空姐周娅菲，以天使般的外貌和魔鬼般的身材吸引了无数人的目光/1725591021.mp4" type="video/mp4">
+            </video>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright © 2021 吃瓜网站</p>
+        <p><a href="#">隐私条款</a> | <a href="#">使用条款</a></p>
+        <p>联系我们：<a href="mailto:<EMAIL>">
+                <EMAIL>
+            </a></p>
+        <p>粤ICP备2021005979号-1</p>
+    </footer>
+
+    <script>
+        const imageFolderPath = '/chiguawangzhan/image/川航的极品空姐周娅菲，以天使般的外貌和魔鬼般的身材吸引了无数人的目光/';
+
+        // 获取图片文件夹中的所有图片
+        function loadImages() {
+            // 生成从 1.jpg 到 8.jpg 的数组
+            const imageNames = [];
+            for (let i = 1; i <= 8; i++) {
+                imageNames.push(`${i}.jpg`);
+            }
+
+            const imageContainer = document.getElementById('image-container');
+            imageContainer.innerHTML = ''; // 清空图片容器
+
+            // 添加初始段落
+            const initialParagraph = document.createElement('p');
+            initialParagraph.textContent = '川航的极品空姐周娅菲，以天使般的外貌和魔鬼般的身材吸引了无数人的目光，但她的私生活却令人瞠目结舌。周娅菲有着强烈的性欲，她对恋爱毫无兴趣，反而更加痴迷于与炮友约炮，每次下班前都会提前与炮友约好饭局，饭后直接回酒店干炮。';
+            imageContainer.appendChild(initialParagraph);
+
+            // 定义段落内容数组
+            const paragraphContents = [
+                '她的私生活令人瞠目结舌，她的性生活也令人担忧。她曾经在酒店里与男友发生性关系，但男友并不喜欢她，她便离开了酒店。周娅菲的性生活让她感到不安全，她的男友也不希望她继续在酒店里做性行为，她便回到家中独处。',
+                '周娅菲有一张令男人难以忘怀的脸庞，五官精致，尤其是那双狭长的丹凤眼，透着一股妩媚与诱惑。她那红唇轻启，仿佛总是在无声地邀请。平日里空姐制服下隐藏的火辣身材，在视频中得到了充分展现 —— 一头乌黑亮丽的长发随意披散在肩上，性感得让人移不开眼。',
+                '她的身材堪称完美，丰满的胸部和翘臀让每个见过她的人都欲罢不能。纤细的腰肢与修长的双腿更是为她增添了几分致命的吸引力。视频中，她被炮友压在身下时，那对豪乳随着每一次猛烈的冲击摇摆不停，场面极其撩人。',
+                '在视频中，周娅菲表现得极其放荡，毫不掩饰她的欲望。她被炮友按在床上后入，身体不住地迎合对方的节奏，淫叫声此起彼伏，每一次抽插都让她沉浸在极致的快感中。她的表情充满了享受与渴望，整个人仿佛已经完全失去了理智，只剩下了对肉体欢愉的追求。'
+            ];
+
+            // 添加图片和中间段落
+            imageNames.forEach((imageName, index) => {
+                const img = document.createElement('img');
+                img.src = imageFolderPath + imageName;
+                img.alt = imageName;
+                imageContainer.appendChild(img);
+
+                // 在每两张图片后插入一个段落
+                if ((index + 1) % 2 === 0 && paragraphContents[Math.floor(index / 2)]) {
+                    const paragraph = document.createElement('p');
+                    paragraph.textContent = paragraphContents[Math.floor(index / 2)];
+                    imageContainer.appendChild(paragraph);
+                }
+            });
+        }
+
+        // 页面加载完成后调用 loadImages 函数
+        window.onload = loadImages;
+
+    </script>
+</body>
+
+</html>

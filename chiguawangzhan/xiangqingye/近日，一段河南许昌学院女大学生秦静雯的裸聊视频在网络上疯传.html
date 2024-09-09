@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>详情页</title>
+    <style>
+        /* 全局样式 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        /* 头部样式 */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 10px 20px;
+            background-color: #f8f8f8;
+            border-bottom: 1px solid #ddd;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* 主要内容样式 */
+        main {
+            width: 80%;
+            max-width: 800px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        main h2 {
+            margin-bottom: 20px;
+        }
+
+        main p {
+            text-indent: 2em;
+            /* 段落首行缩进2个字符 */
+            margin-bottom: 20px;
+        }
+
+        /* 图片容器样式 */
+        #image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #image-container img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        /* 视频样式 */
+        video {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* 底部信息样式 */
+        footer {
+            width: 100%;
+            padding: 10px 20px;
+            background-color: #f8f8f8;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        /* 媒体查询，用于手机自适应 */
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul {
+                margin-top: 10px;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            main {
+                width: 95%;
+                /* 进一步调整主要内容宽度 */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>吃瓜网站</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="#">分类</a></li>
+                <li><a href="#">用户中心</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="detail-page">
+            <h2>近日，一段河南许昌学院女大学生秦静雯的裸聊视频在网络上疯传</h2>
+            <p></p>
+            <div id="image-container">
+                <!-- 图片和段落将通过JavaScript动态加载 -->
+            </div>
+            <video controls>
+                <source src="/chiguawangzhan/image/近日，一段河南许昌学院女大学生秦静雯的裸聊视频在网络上疯传/1725783621.mp4" type="video/mp4">
+            </video>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright © 2021 吃瓜网站</p>
+        <p><a href="#">隐私条款</a> | <a href="#">使用条款</a></p>
+        <p>联系我们：<a href="mailto:<EMAIL>">
+                <EMAIL>
+            </a></p>
+        <p>粤ICP备2021005979号-1</p>
+    </footer>
+
+    <script>
+        const imageFolderPath = '/chiguawangzhan/image/近日，一段河南许昌学院女大学生秦静雯的裸聊视频在网络上疯传/';
+
+        // 获取图片文件夹中的所有图片
+        function loadImages() {
+            // 生成从 1.jpg 到 8.jpg 的数组
+            const imageNames = [];
+            for (let i = 1; i <= 8; i++) {
+                imageNames.push(`${i}.jpg`);
+            }
+
+            const imageContainer = document.getElementById('image-container');
+            imageContainer.innerHTML = ''; // 清空图片容器
+
+            // 添加初始段落
+            const initialParagraph = document.createElement('p');
+            initialParagraph.textContent = '近日，一段河南许昌学院女大学生秦静雯的裸聊视频在网络上疯传，尺度之大让人瞠目结舌。秦静雯在视频中大胆地与网友聊骚，不仅展示了她的性感身材，还毫不掩饰地在视频中进行挑逗和自拍，瞬间引爆了话题。';
+            imageContainer.appendChild(initialParagraph);
+
+            // 定义段落内容数组
+            const paragraphContents = [
+                '秦静雯的长相并非那种一眼惊艳的类型，但她属于那种越看越耐看的女生。她有一双大而明亮的眼睛，透着几分妩媚和不羁，嘴角微微上扬，总带着一丝若有似无的笑意，让人难以移开视线。她的头发微卷，散落在肩膀上，为她增添了一种随性的性感气质。',
+                '虽然秦静雯的外貌不是特别出众，但她的身材却非常火辣。她的美乳浑圆饱满，视频中更是毫不吝啬地展现了这一点，乳沟深邃，肌肤雪白，充满弹性。她的腰肢纤细，曲线玲珑，特别是那双修长的大腿，给人一种无与伦比的视觉冲击。她的臀部线条紧致翘挺，仿佛每一寸肌肤都在散发着性感魅力。',
+                '',
+                '视频中的秦静雯大胆挑逗，不仅是裸聊那么简单。她隔着屏幕用甜腻的嗓音叫着 “老公”，说自己爱吃 “老公的肉棒”，还承诺会 “认认真真好好舔”，让屏幕另一端的网友欲罢不能。秦静雯还毫不掩饰地提到自己 “爱喝老公的精液”，并表示光是聊骚，小穴就已经湿得不行了。视频中，她更是直接用自拍展示自己洗澡的全过程，双手捧起美乳，浑圆的乳房在水流中若隐若现，画面挑逗至极。她还大胆地掰开自己的逼逼，面对镜头毫不害羞地展示自己的私处，整个画面充满了极致的诱惑。'
+            ];
+
+            // 添加图片和中间段落
+            imageNames.forEach((imageName, index) => {
+                const img = document.createElement('img');
+                img.src = imageFolderPath + imageName;
+                img.alt = imageName;
+                imageContainer.appendChild(img);
+
+                // 在每两张图片后插入一个段落
+                if ((index + 1) % 2 === 0 && paragraphContents[Math.floor(index / 2)]) {
+                    const paragraph = document.createElement('p');
+                    paragraph.textContent = paragraphContents[Math.floor(index / 2)];
+                    imageContainer.appendChild(paragraph);
+                }
+            });
+        }
+
+        // 页面加载完成后调用 loadImages 函数
+        window.onload = loadImages;
+
+    </script>
+</body>
+
+</html>

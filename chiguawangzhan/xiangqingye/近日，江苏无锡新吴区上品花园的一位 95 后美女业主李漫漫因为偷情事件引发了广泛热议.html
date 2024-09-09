@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>详情页</title>
+    <style>
+        /* 全局样式 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        /* 头部样式 */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 10px 20px;
+            background-color: #f8f8f8;
+            border-bottom: 1px solid #ddd;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* 主要内容样式 */
+        main {
+            width: 80%;
+            max-width: 800px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        main h2 {
+            margin-bottom: 20px;
+        }
+
+        main p {
+            text-indent: 2em;
+            /* 段落首行缩进2个字符 */
+            margin-bottom: 20px;
+        }
+
+        /* 图片容器样式 */
+        #image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #image-container img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        /* 视频样式 */
+        video {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* 底部信息样式 */
+        footer {
+            width: 100%;
+            padding: 10px 20px;
+            background-color: #f8f8f8;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        /* 媒体查询，用于手机自适应 */
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul {
+                margin-top: 10px;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            main {
+                width: 95%;
+                /* 进一步调整主要内容宽度 */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>吃瓜网站</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="#">分类</a></li>
+                <li><a href="#">用户中心</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="detail-page">
+            <h2>近日，江苏无锡新吴区上品花园的一位 95 后美女业主李漫漫因为偷情事件引发了广泛热议</h2>
+
+            <div id="image-container">
+                <!-- 图片和段落将通过JavaScript动态加载 -->
+            </div>
+            <video controls>
+                <source src="/chiguawangzhan/image/近日，江苏无锡新吴区上品花园的一位 95 后美女业主李漫漫因为偷情事件引发了广泛热议/1725783659.mp4"
+                    type="video/mp4">
+            </video>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright © 2021 吃瓜网站</p>
+        <p><a href="#">隐私条款</a> | <a href="#">使用条款</a></p>
+        <p>联系我们：<a href="mailto:<EMAIL>">
+                <a>
+                </a></a>
+        <p>粤ICP备2021005979号-1</p>
+    </footer>
+
+    <script>
+        const imageFolderPath = '/chiguawangzhan/image/近日，江苏无锡新吴区上品花园的一位 95 后美女业主李漫漫因为偷情事件引发了广泛热议/';
+
+        // 获取图片文件夹中的所有图片
+        function loadImages() {
+            // 生成从 1.jpg 到 8.jpg 的数组
+            const imageNames = [];
+            for (let i = 1; i <= 8; i++) {
+                imageNames.push(`${i}.jpg`);
+            }
+
+            const imageContainer = document.getElementById('image-container');
+            imageContainer.innerHTML = ''; // 清空图片容器
+
+            // 添加初始段落
+            const initialParagraph = document.createElement('p');
+            initialParagraph.textContent = '近日，江苏无锡新吴区上品花园的一位 95 后美女业主李漫漫因为偷情事件引发了广泛热议。视频被男友发现并曝光，李漫漫在画面中的表现极为大胆。她那纯纯反差婊的形象和天使般的颜值形成鲜明对比，视频内容尺度惊人，迅速成为网络上的热门话题';
+            imageContainer.appendChild(initialParagraph);
+
+            // 定义段落内容数组
+            const paragraphContents = [
+                '李漫漫拥有着令人羡慕的绝佳外貌，宛如一个现实中的女神。她那白皙无暇的皮肤在镜头下显得尤为耀眼，柔软的长发随意披散在肩上，仿佛每一缕发丝都在释放性感的气息。她的五官精致，眼睛明亮有神，带着一丝无辜的纯情，但这无辜的外表下却隐藏着她极具挑逗的内在。她的唇红齿白，笑容中带着一种难以言喻的妩媚与诱惑。',
+                '',
+                '李漫漫的身材堪称完美，修长而窈窕，每一个曲线都恰到好处。她的腰肢纤细得仿佛可以一手掌握，丰满的胸部挺拔而有弹性，蜜桃般的小奶头在视频中显得格外诱人。她的皮肤白嫩如雪，仿佛能透出淡淡的粉红色光泽，整个人散发着难以抗拒的性感魅力。纤细修长的双腿和高挑的身姿，让她无论穿上什么衣服都能显得格外妖娆，而她所穿的那身妖艳服饰更是将她的性感指数拉到了极致。',
+                '在曝光的视频中，李漫漫展现出了极为大胆且熟练的技艺。她灵巧的小嘴轻轻含住炮友的大肉棒，舌头灵活地在龟头上来回穿梭，蠕动的舌尖每一次接触都仿佛在引燃欲火。她专注地吸吮着，时而加快节奏，时而放慢速度，带着极致的挑逗感。她的眼神迷离，仿佛完全沉浸在这个过程中，动作娴熟到令人难以自拔。她的表现不仅让炮友飘飘欲仙，连观看视频的观众也无不为她的魅惑所迷惑，欲望升腾。'
+            ];
+
+            // 添加图片和中间段落
+            imageNames.forEach((imageName, index) => {
+                const img = document.createElement('img');
+                img.src = imageFolderPath + imageName;
+                img.alt = imageName;
+                imageContainer.appendChild(img);
+
+                // 在每两张图片后插入一个段落
+                if ((index + 1) % 2 === 0 && paragraphContents[Math.floor(index / 2)]) {
+                    const paragraph = document.createElement('p');
+                    paragraph.textContent = paragraphContents[Math.floor(index / 2)];
+                    imageContainer.appendChild(paragraph);
+                }
+            });
+        }
+
+        // 页面加载完成后调用 loadImages 函数
+        window.onload = loadImages;
+
+    </script>
+</body>
+
+</html>

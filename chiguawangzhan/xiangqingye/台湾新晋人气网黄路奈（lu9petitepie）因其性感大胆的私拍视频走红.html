@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>详情页</title>
+    <style>
+        /* 全局样式 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        /* 头部样式 */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 10px 20px;
+            background-color: #f8f8f8;
+            border-bottom: 1px solid #ddd;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* 主要内容样式 */
+        main {
+            width: 80%;
+            max-width: 800px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        main h2 {
+            margin-bottom: 20px;
+        }
+
+        main p {
+            text-indent: 2em;
+            /* 段落首行缩进2个字符 */
+            margin-bottom: 20px;
+        }
+
+        /* 图片容器样式 */
+        #image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #image-container img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        /* 视频样式 */
+        video {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* 底部信息样式 */
+        footer {
+            width: 100%;
+            padding: 10px 20px;
+            background-color: #f8f8f8;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        /* 媒体查询，用于手机自适应 */
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul {
+                margin-top: 10px;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            main {
+                width: 95%;
+                /* 进一步调整主要内容宽度 */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>吃瓜网站</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="#">分类</a></li>
+                <li><a href="#">用户中心</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="detail-page">
+            <h2>台湾新晋人气网黄路奈（lu9petitepie）因其性感大胆的私拍视频走红</h2>
+            <p></p>
+            <div id="image-container">
+                <!-- 图片和段落将通过JavaScript动态加载 -->
+            </div>
+            <video controls>
+                <source src="/chiguawangzhan/image/台湾新晋人气网黄路奈（lu9petitepie）因其性感大胆的私拍视频走红/1725782513.mp4"
+                    type="video/mp4">
+            </video>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright © 2021 吃瓜网站</p>
+        <p><a href="#">隐私条款</a> | <a href="#">使用条款</a></p>
+        <p>联系我们：<a href="mailto:<EMAIL>">
+                <EMAIL>
+            </a></p>
+        <p>粤ICP备2021005979号-1</p>
+    </footer>
+
+    <script>
+        const imageFolderPath = '/chiguawangzhan/image/台湾新晋人气网黄路奈（lu9petitepie）因其性感大胆的私拍视频走红/';
+
+        // 获取图片文件夹中的所有图片
+        function loadImages() {
+            // 生成从 1.jpg 到 8.jpg 的数组
+            const imageNames = [];
+            for (let i = 1; i <= 8; i++) {
+                imageNames.push(`${i}.jpg`);
+            }
+
+            const imageContainer = document.getElementById('image-container');
+            imageContainer.innerHTML = ''; // 清空图片容器
+
+            // 添加初始段落
+            const initialParagraph = document.createElement('p');
+            initialParagraph.textContent = '台湾新晋人气网黄路奈（lu9petitepie）因其性感大胆的私拍视频走红，迅速吸引了大量粉丝的关注。虽然她刚开始不久，但作品中她那让人难以抗拒的反差魅力已经备受瞩目。她的颜值与身材无可挑剔，带有纹身的野性气质更是让她在一众网红中脱颖而出。';
+            imageContainer.appendChild(initialParagraph);
+
+            // 定义段落内容数组
+            const paragraphContents = [
+                '路奈的五官精致，面庞小巧可爱，给人一种初见时乖巧清纯的感觉，然而当她脱下衣物后，整个气质却发生了翻天覆地的变化。她的眼睛大而明亮，带着几分挑逗的光芒，唇形饱满，微微上翘的嘴角中透出几分不羁与性感。这样的颜值，不仅是网络上的一抹亮色，更是让人欲罢不能的视觉享受。',
+                '路奈拥有超模般的完美身材，纤细的腰肢与修长的双腿让她的曲线显得更加优美。她的臀部紧翘丰满，每一个动作都充满了弹性和活力，给人一种难以忽视的性感冲击力。她的身体上布满了各种纹身，尤其是大腿、手臂、胸口和小腹的图案，展现出她狂野的一面，形成了她独特的反差美。丰满挺拔的美乳，在视频中格外诱人，想象着手感定是极为丰盈且柔滑，让人忍不住想要一亲芳泽。',
+                '',
+                '视频中的路奈大胆展示自己的身体，每一个姿势都极具挑逗性。她在镜头前毫不羞涩，随着镜头的推进，她逐渐展露出自己的魅惑与野性。她的每一次身体摆动，尤其是那翘臀的律动，仿佛在刻意勾引着观众的视线，令人为之神魂颠倒。她的动作灵活且自信，完全无视镜头，仿佛享受着被注视的感觉。那层层叠叠的纹身和她的野性魅力相互呼应，让她的每一个动作都更加充满诱惑。'
+            ];
+
+            // 添加图片和中间段落
+            imageNames.forEach((imageName, index) => {
+                const img = document.createElement('img');
+                img.src = imageFolderPath + imageName;
+                img.alt = imageName;
+                imageContainer.appendChild(img);
+
+                // 在每两张图片后插入一个段落
+                if ((index + 1) % 2 === 0 && paragraphContents[Math.floor(index / 2)]) {
+                    const paragraph = document.createElement('p');
+                    paragraph.textContent = paragraphContents[Math.floor(index / 2)];
+                    imageContainer.appendChild(paragraph);
+                }
+            });
+        }
+
+        // 页面加载完成后调用 loadImages 函数
+        window.onload = loadImages;
+
+    </script>
+</body>
+
+</html>
