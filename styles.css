@@ -1,15 +1,8 @@
 /* 基础样式 */
-/* 确保body和html占满整个视口 */
-html, body {
-    height: 100%;
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-/* 使用flexbox布局，使main内容占满剩余空间 */
 body {
-    display: flex;
-    flex-direction: column;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 /* 全局去掉链接下划线 */
@@ -48,11 +41,9 @@ nav ul li {
 
 nav ul li a {
     color: white;
-    text-decoration: none;
 }
 
 main {
-    flex: 1 0 auto; /* 使main内容占满剩余空间，但允许内容不足时自动扩展 */
     padding: 20px;
 }
 
@@ -79,15 +70,8 @@ main {
 }
 
 .pagination button {
+    padding: 10px 20px;
     margin: 0 10px;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    flex-shrink: 0; /* 防止footer收缩 */
 }
 
 footer {
@@ -128,25 +112,12 @@ footer {
     box-sizing: border-box;
     text-align: center;
 }
+
 @media (min-width: 600px) {
-  .grid-item .title {
+    .grid-item .title {
         font-size: 14px;
-/*         大屏幕时增大字体 */} */
-
-     nav ul {
-        flex-direction: column;
-        align-items: center;
+        /* 大屏幕时增大字体 */
     }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    .grid-container {
-        grid-template-columns: 1fr;
-    }
-
-
 }
 
 @media (min-width: 900px) {
@@ -159,16 +130,19 @@ footer {
 /* 响应式设计 */
 @media (max-width: 768px) {
     .grid-container {
-        grid-template-columns: repeat(2, 1fr); /* 手机上两列 */
+        grid-template-columns: repeat(2, 1fr);
+        /* 手机上两列 */
     }
 
     header {
-        flex-direction: row; /* 手机上导航栏和网站名称水平排列 */
+        flex-direction: row;
+        /* 手机上导航栏和网站名称水平排列 */
         align-items: center;
     }
 
     nav ul {
-        margin-top: 0; /* 去掉顶部间距 */
+        margin-top: 0;
+        /* 去掉顶部间距 */
     }
 
     nav ul li {
