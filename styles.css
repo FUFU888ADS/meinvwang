@@ -13,7 +13,7 @@ a {
 header {
     background-color: #4a4a4a;
     /* 高级灰 */
-    padding: 10px 20px;
+    padding: 5px 5px;
     color: white;
     display: flex;
     /* 使用Flexbox布局 */
@@ -79,7 +79,7 @@ footer {
     /* 高级灰 */
     color: white;
     text-align: center;
-    padding: 5px 0;
+    padding: 5px 5px;
     position: fixed; 
     width: 100%;
     bottom: 0;   
@@ -105,7 +105,7 @@ footer {
     color: white;
     font-size: 12px;
     /* 可以根据需要调整 */
-    padding: 5px;
+    padding: 5px 5px;
     position: absolute;
     bottom: 0;
     left: 0;
