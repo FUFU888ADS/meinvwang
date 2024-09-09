@@ -65,8 +65,13 @@ main {
 }
 
 .pagination {
-    margin-top: 5px;
+    margin-top: 20px;
     text-align: center;
+    position: sticky;
+    bottom: 0;
+    background-color: white; /* 确保背景色与页面背景一致 */
+    z-index: 10; /* 确保分页按钮在内容的上方 */
+}
 }
 
 .pagination button {
