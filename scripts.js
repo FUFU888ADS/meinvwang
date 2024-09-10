@@ -119,7 +119,10 @@ document.addEventListener('DOMContentLoaded', function () {
 // 搜索功能：根据用户输入动态过滤内容
     searchInput.addEventListener('input', function () {
         const query = searchInput.value.toLowerCase();
-        filteredImages = images.filter(image => image.alt.toLowerCase().includes(query));
+       filteredImages = images.filter(image => 
+            (image.title && image.title.toLowerCase().includes(query)) || 
+            (image.alt && image.alt.toLowerCase().includes(query))
+        );
         currentPage = 1; // 搜索时重置为第一页
         generateContent(currentPage);
         updateButtons();
