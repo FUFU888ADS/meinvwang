@@ -52,6 +52,31 @@ document.addEventListener('DOMContentLoaded', function () {
     const totalItems = images.length;
     const totalPages = Math.ceil(totalItems / itemsPerPage);
 
+
+
+ function formatDate(date) {
+        return date.toLocaleString('zh-CN', {
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+        });
+ }
+
+
+
+
+
+
+
+
+
+
+
+    
+
     function generateContent(page) {
         gridContainer.innerHTML = ''; // 清空容器
         const start = (page - 1) * itemsPerPage;
@@ -63,6 +88,23 @@ document.addEventListener('DOMContentLoaded', function () {
             item.href = images[i].link;
             item.className = 'grid-item';
 
+
+ // 创建更新时间元素
+            const updateTime = document.createElement('div');
+            updateTime.className = 'update-time';
+            updateTime.textContent = '更新时间：' + formatDate(new Date());
+
+
+
+
+
+
+
+
+
+
+            
+
             const img = document.createElement('img');
             img.src = images[i].src;
             img.alt = images[i].alt;
@@ -71,6 +113,12 @@ document.addEventListener('DOMContentLoaded', function () {
             title.className = 'title';
             title.textContent = images[i].title || images[i].alt;
 
+            // item.appendChild(img);
+            // item.appendChild(title);
+            // gridContainer.appendChild(item);
+
+             // 将更新时间和图片添加到容器中
+            item.appendChild(updateTime);
             item.appendChild(img);
             item.appendChild(title);
             gridContainer.appendChild(item);
