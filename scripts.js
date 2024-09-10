@@ -76,9 +76,9 @@ document.addEventListener('DOMContentLoaded', function () {
         const end = start + itemsPerPage;
 
         for (let i = start; i < end; i++) {
-            if (i >= totalItems) break;
+            if (i >= filteredImages.length) break;
             const item = document.createElement('a');
-            item.href = images[i].link;
+            item.href = filteredImages[i].link;
             item.className = 'grid-item';
 
 
@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             const title = document.createElement('div');
             title.className = 'title';
-            title.textContent = images[i].title || images[i].alt;
+            title.textContent = filteredImages[i].alt;
 
             // item.appendChild(img);
             // item.appendChild(title);
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function () {
             gridContainer.appendChild(item);
         }
 
-        pageInfo.textContent = `第 ${page} 页，共 ${totalPages} 页`;
+        pageInfo.textContent = `第 ${page} 页，共 ${Math.ceil(filteredImages.length / itemsPerPage)} 页`;
     }
 
 
@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     nextPageButton.addEventListener('click', () => {
-        if (currentPage < totalPages) {
+       if (currentPage < Math.ceil(filteredImages.length / itemsPerPage)) {
             currentPage++;
             generateContent(currentPage);
             updateButtons();
