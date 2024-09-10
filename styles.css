@@ -113,6 +113,15 @@ footer {
     text-align: center;
 }
 
+.update-time {
+    text-align: center;
+    color: #666;
+    font-size: 12px;
+    margin-bottom: 5px; /* 与图片间的间距 */
+}
+
+
+
 @media (min-width: 600px) {
     .grid-item .title {
         font-size: 14px;
