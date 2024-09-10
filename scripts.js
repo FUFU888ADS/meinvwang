@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // 设置 gridContainer 的高度和滚动条
-    gridContainer.style.maxHeight = '600px'; // 设置一个固定高度
+    gridContainer.style.maxHeight = '500px'; // 设置一个固定高度
     gridContainer.style.overflowY = 'scroll'; // 添加垂直滚动条
 
     generateContent(currentPage);
