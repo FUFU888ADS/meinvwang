@@ -121,6 +121,57 @@ footer {
 }
 
 
+/* 搜索模块样式 */
+.search-container {
+    padding: 10px 20px;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center; /* 居中对齐 */
+    align-items: center; /* 垂直居中对齐 */
+}
+
+.search-container input[type="text"] {
+    width: 200px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.search-container button {
+    padding: 8px 15px;
+    background-color: #4a4a4a;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background-color: #666;
+}
+
+/* 手机端优化 */
+@media (max-width: 768px) {
+    .search-container {
+        flex-direction: column; /* 搜索框和按钮垂直排列 */
+        padding: 10px;
+    }
+
+    .search-container input[type="text"] {
+        width: 100%; /* 适应屏幕宽度 */
+        margin-bottom: 10px;
+    }
+
+    .search-container button {
+        width: 100%; /* 适应屏幕宽度 */
+    }
+}
+
+
+
+
+
 
 @media (min-width: 600px) {
     .grid-item .title {
