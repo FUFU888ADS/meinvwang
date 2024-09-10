@@ -13,7 +13,7 @@ a {
 header {
     background-color: #4a4a4a;
     /* 高级灰 */
-    padding: 5px 5px;
+    padding: 10px 20px;
     color: white;
     display: flex;
     /* 使用Flexbox布局 */
@@ -21,7 +21,9 @@ header {
     /* 标题和导航栏分别位于两端 */
     align-items: center;
     /* 垂直居中对齐 */
-}
+    position: sticky; /* 使用 sticky 定位 */
+    top: 0;
+    z-index: 100; /* 确保导航栏在内容之上 */
 
 header h1 {
     margin: 0;
@@ -44,9 +46,9 @@ nav ul li a {
 }
 
 main {
-    padding: 5px;
-     margin-bottom: 60px; /* 增加底部外边距，确保内容不会被底部容器遮挡 */
-}
+    flex: 1; /* 使 main 部分占据剩余空间 */
+    padding: 20px;
+    overflow-y: auto; /* 添加垂直滚动条 */
 
 .grid-container {
     display: grid;
@@ -82,13 +84,14 @@ main {
 
 footer {
     background-color: #4a4a4a;
+    /* 高级灰 */
     color: white;
     text-align: center;
     padding: 20px 0; /* 增加底部容器的内边距 */
     width: 100%;
+    position: sticky; /* 使用 sticky 定位 */
     bottom: 0;
-    position: relative; /* 改为相对定位 */
-    margin-top: 20px; /* 增加顶部外边距 */
+    z-index: 100; /* 确保底部容器在内容之上 */
 }
 
 
