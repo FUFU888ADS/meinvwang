@@ -5,6 +5,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const prevPageButton = document.getElementById('prevPage');
     const nextPageButton = document.getElementById('nextPage');
 
+    const searchInput = document.getElementById('searchInput');
+    const searchButton = document.getElementById('searchButton');
+
     let currentPage = 1;
 
     // 图片路径、标题、链接的数组
@@ -138,6 +141,18 @@ document.addEventListener('DOMContentLoaded', function () {
         nextPageButton.disabled = currentPage === totalPages;
     }
 
+searchButton.addEventListener('click', () => {
+        const searchTerm = searchInput.value.toLowerCase();
+        filteredImages = images.filter(image => image.title.toLowerCase().includes(searchTerm));
+        currentPage = 1; // 重置到第一页
+        generateContent(currentPage);
+        updateButtons();
+    });
+
+
+
+
+    
     prevPageButton.addEventListener('click', () => {
         if (currentPage > 1) {
             currentPage--;
