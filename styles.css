@@ -65,10 +65,11 @@ main {
 }
 
 .pagination {
-/*     margin-top: 10px;  增加 margin-top 以确保分页按钮在动态生成内容的下方 */ 
+    margin-top: 20px;
     text-align: center;
-     height: 10px; /* 你可以根据需要调整高度 */
+    margin-bottom: 60px; /* 增加底部外边距，确保分页不会覆盖到底部容器 */
 }
+
 
 .pagination button {
     padding: 5px 5px;
@@ -77,15 +78,15 @@ main {
 
 footer {
     background-color: #4a4a4a;
-    /* 高级灰 */
     color: white;
     text-align: center;
-    padding: 5px 5px;
-    position: fixed; 
+    padding: 20px 0; /* 增加底部容器的内边距 */
     width: 100%;
-    bottom: 0; 
-     height: 20px; /* 你可以根据需要调整高度 */
+    bottom: 0;
+    position: relative; /* 改为相对定位 */
+    margin-top: 20px; /* 增加顶部外边距 */
 }
+
 
 
 .grid-item {
