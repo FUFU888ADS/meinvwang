@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const pageInfo = document.getElementById('pageInfo');
     const prevPageButton = document.getElementById('prevPage');
     const nextPageButton = document.getElementById('nextPage');
+     const searchInput = document.getElementById('searchInput'); // 获取搜索框
 
     let currentPage = 1;
 
@@ -52,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
     ];
 
 
-
+    let filteredImages = [...images]; // 初始化为所有图片
     const totalItems = images.length;
     const totalPages = Math.ceil(totalItems / itemsPerPage);
 
@@ -112,8 +113,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function updateButtons() {
         prevPageButton.disabled = currentPage === 1;
-        nextPageButton.disabled = currentPage === totalPages;
+        nextPageButton.disabled = currentPage === Math.ceil(filteredImages.length / itemsPerPage);
     }
+
+// 搜索功能：根据用户输入动态过滤内容
+    searchInput.addEventListener('input', function () {
+        const query = searchInput.value.toLowerCase();
+        filteredImages = images.filter(image => image.alt.toLowerCase().includes(query));
+        currentPage = 1; // 搜索时重置为第一页
+        generateContent(currentPage);
+        updateButtons();
+    });
+    
 
     prevPageButton.addEventListener('click', () => {
         if (currentPage > 1) {
