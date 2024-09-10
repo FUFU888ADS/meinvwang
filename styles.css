@@ -45,6 +45,7 @@ nav ul li a {
 
 main {
     padding: 5px;
+     margin-bottom: 60px; /* 增加底部外边距，确保内容不会被底部容器遮挡 */
 }
 
 .grid-container {
