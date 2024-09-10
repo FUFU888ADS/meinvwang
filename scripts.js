@@ -5,9 +5,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const prevPageButton = document.getElementById('prevPage');
     const nextPageButton = document.getElementById('nextPage');
 
-    const searchInput = document.getElementById('searchInput');
-    const searchButton = document.getElementById('searchButton');
-
     let currentPage = 1;
 
     // 图片路径、标题、链接的数组
@@ -23,16 +20,15 @@ document.addEventListener('DOMContentLoaded', function () {
         { src: 'chiguawangzhan/image/台湾新晋人气网黄路奈（lu9petitepie）因其性感大胆的私拍视频走红/6.jpg', alt: '台湾新晋人气网黄路奈（lu9petitepie）因其性感大胆的私拍视频走红7', link: 'chiguawangzhan/xiangqingye/台湾新晋人气网黄路奈（lu9petitepie）因其性感大胆的私拍视频走红.html' },
         { src: 'chiguawangzhan/image/中国人体艺术界的代表性裸模『张筱雨』全裸艺术摄影视图流出！/3.jpg', alt: '中国人体艺术界的代表性裸模『张筱雨』全裸艺术摄影视图流出！', link: 'chiguawangzhan/xiangqingye/中国人体艺术界的代表性裸模『张筱雨』全裸艺术摄影视图流出！.html' },
         { src: 'chiguawangzhan/image/抖音巨乳网红低俗PK惩罚 输了拿牙签扎胸/3.jpg', alt: '抖音巨乳网红低俗PK惩罚 输了拿牙签扎胸', link: 'chiguawangzhan/xiangqingye/抖音巨乳网红低俗PK惩罚 输了拿牙签扎胸.html' },
-        { src: 'chiguawangzhan/image/北京市海韵艺术学校英奥校区芭蕾舞妹子『胡妍慈』被包养！/3.jpg', alt: '北京市海韵艺术学校英奥校区芭蕾舞妹子『胡妍慈』被包养！', link: 'chiguawangzhan/xiangqingye/北京市海韵艺术学校英奥校区芭蕾舞妹子『胡妍慈』被包养！.html' },
-        
-        
-        { src: 'title-image3.jpg', alt: '详情页标题图片8', link: '' },
+        { src: 'chiguawangzhan/image/北京市海韵艺术学校英奥校区芭蕾舞妹子『胡妍慈』被包养！/3.jpg', alt: '北京市海韵艺术学校英奥校区芭蕾舞妹子『胡妍慈』被包养！', link: 'chiguawangzhan/xiangqingye/北京市海韵艺术学校英奥校区芭蕾舞妹子『胡妍慈』被包养！.html' }, 
+
+        { src: 'title-image3.jpg', alt: '详情页标题图片8', link: 'detail-page3.html' },
         { src: 'title-image4.jpg', alt: '详情页标题图片9', link: 'detail-page4.html' },
         { src: 'title-image5.jpg', alt: '详情页标题图片10', link: 'detail-page5.html' },
 
         { src: '/chiguawangzhan/image/山西大同的清纯眼镜妹余思琪。她身材高挑，曲线迷人，巨乳细腰和大肥臀让人无法自拔。/6.jpg', alt: '山西大同的清纯眼镜妹余思琪。她身材高挑，曲线迷人，巨乳细腰和大肥臀让人无法自拔', link: 'chiguawangzhan/xiangqingye/山西大同的清纯眼镜妹余思琪。她身材高挑，曲线迷人，巨乳细腰和大肥臀让人无法自拔.html' },
         { src: '/chiguawangzhan/image/台湾新晋人气网黄路奈（lu9petitepie）因其性感大胆的私拍视频走红/6.jpg', alt: '台湾新晋人气网黄路奈（lu9petitepie）因其性感大胆的私拍视频走红7', link: 'chiguawangzhan/xiangqingye/台湾新晋人气网黄路奈（lu9petitepie）因其性感大胆的私拍视频走红.html' },
-        
+        { src: 'title-image3.jpg', alt: '详情页标题图片8', link: 'detail-page3.html' },
         { src: 'title-image4.jpg', alt: '详情页标题图片9', link: 'detail-page4.html' },
         { src: 'title-image5.jpg', alt: '详情页标题图片10', link: 'detail-page5.html' },
 
@@ -73,28 +69,15 @@ document.addEventListener('DOMContentLoaded', function () {
         });
  }
 
-
-
-
-
-
-
-
-
-
-
-    
-
     function generateContent(page) {
         gridContainer.innerHTML = ''; // 清空容器
         const start = (page - 1) * itemsPerPage;
         const end = start + itemsPerPage;
 
         for (let i = start; i < end; i++) {
-            // if (i >= totalItems) break;
+            if (i >= totalItems) break;
             const item = document.createElement('a');
-           item.href = filteredImages[i].link;
-            // item.href = images[i].link;
+            item.href = images[i].link;
             item.className = 'grid-item';
 
 
@@ -104,27 +87,13 @@ document.addEventListener('DOMContentLoaded', function () {
             updateTime.textContent = '更新时间：' + formatDate(new Date());
 
 
-
-
-
-
-
-
-
-
-            
-
-            // const img = document.createElement('img');
-            // img.src = images[i].src;
-            // img.alt = images[i].alt;
-              const img = document.createElement('img');
-            img.src = filteredImages[i].src;
-            img.alt = filteredImages[i].alt;
+            const img = document.createElement('img');
+            img.src = images[i].src;
+            img.alt = images[i].alt;
 
             const title = document.createElement('div');
             title.className = 'title';
-            // title.textContent = images[i].title || images[i].alt;
-            title.textContent = filteredImages[i].title || filteredImages[i].alt;
+            title.textContent = images[i].title || images[i].alt;
 
             // item.appendChild(img);
             // item.appendChild(title);
@@ -143,23 +112,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function updateButtons() {
         prevPageButton.disabled = currentPage === 1;
-        // nextPageButton.disabled = currentPage === totalPages;
-
-        nextPageButton.disabled = currentPage === Math.ceil(filteredImages.length / itemsPerPage);
+        nextPageButton.disabled = currentPage === totalPages;
     }
 
-searchButton.addEventListener('click', () => {
-        const searchTerm = searchInput.value.toLowerCase();
-        filteredImages = images.filter(image => image.title.toLowerCase().includes(searchTerm));
-        currentPage = 1; // 重置到第一页
-        generateContent(currentPage);
-        updateButtons();
-    });
-
-
-
-
-    
     prevPageButton.addEventListener('click', () => {
         if (currentPage > 1) {
             currentPage--;
