@@ -65,7 +65,7 @@ main {
 }
 
 .pagination {
-    margin-top: 10px; /* 增加 margin-top 以确保分页按钮在动态生成内容的下方 */
+/*     margin-top: 10px; /* 增加 margin-top 以确保分页按钮在动态生成内容的下方 */ */
     text-align: center;
      height: 10px; /* 你可以根据需要调整高度 */
 }
