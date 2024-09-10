@@ -93,7 +93,8 @@ document.addEventListener('DOMContentLoaded', function () {
         for (let i = start; i < end; i++) {
             // if (i >= totalItems) break;
             const item = document.createElement('a');
-            item.href = images[i].link;
+           item.href = filteredImages[i].link;
+            // item.href = images[i].link;
             item.className = 'grid-item';
 
 
@@ -113,13 +114,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
             
 
-            const img = document.createElement('img');
-            img.src = images[i].src;
-            img.alt = images[i].alt;
+            // const img = document.createElement('img');
+            // img.src = images[i].src;
+            // img.alt = images[i].alt;
+              const img = document.createElement('img');
+            img.src = filteredImages[i].src;
+            img.alt = filteredImages[i].alt;
 
             const title = document.createElement('div');
             title.className = 'title';
-            title.textContent = images[i].title || images[i].alt;
+            // title.textContent = images[i].title || images[i].alt;
+            title.textContent = filteredImages[i].title || filteredImages[i].alt;
 
             // item.appendChild(img);
             // item.appendChild(title);
