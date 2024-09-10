@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>详情页</title>
+    <style>
+        /* 全局样式 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        /* 头部样式 */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 10px 20px;
+            background-color: #f8f8f8;
+            border-bottom: 1px solid #ddd;
+
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* 主要内容样式 */
+        main {
+            width: 80%;
+            max-width: 800px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        main h2 {
+            margin-bottom: 20px;
+        }
+
+        main p {
+            text-indent: 2em;
+            /* 段落首行缩进2个字符 */
+            margin-bottom: 20px;
+        }
+
+        /* 图片容器样式 */
+        #image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #image-container img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        /* 视频样式 */
+        video {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* 底部信息样式 */
+        footer {
+            width: 100%;
+            padding: 10px 20px;
+            background-color: #f8f8f8;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        /* 媒体查询，用于手机自适应 */
+        @media (max-width: 600px) {
+            header {
+                flex-direction: row;
+                /* 水平排列 */
+                justify-content: space-between;
+                /* 左右对齐 */
+                align-items: center;
+            }
+
+            nav ul {
+                margin-top: 0;
+                /* 去掉顶部间距 */
+                flex-direction: row;
+                /* 水平排列 */
+            }
+
+            nav ul li {
+                margin: 0 10px;
+                /* 左右间距 */
+            }
+
+            main {
+                width: 95%;
+                /* 进一步调整主要内容宽度 */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>吃瓜网站</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="#">分类</a></li>
+                <li><a href="#">用户中心</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="detail-page">
+            <h2>中国人体艺术界的代表性裸模『张筱雨』全裸艺术摄影视图流出！湖边、山顶、浴室全裸写真震撼视觉！</h2>
+
+            <div id="image-container">
+                <!-- 图片和段落将通过JavaScript动态加载 -->
+            </div>
+            <video controls>
+                <source src="../image/中国人体艺术界的代表性裸模『张筱雨』全裸艺术摄影视图流出！/9.7  26.mp4" type="video/mp4">
+            </video>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright © 2021 吃瓜网站</p>
+        <p><a href="#">隐私条款</a> | <a href="#">使用条款</a></p>
+        <p>联系我们：<a href="mailto:<EMAIL>">
+                <a>
+                </a></a>
+        <p>粤ICP备2021005979号-1</p>
+    </footer>
+
+    <script>
+        const imageFolderPath = '../image/中国人体艺术界的代表性裸模『张筱雨』全裸艺术摄影视图流出！/';
+
+        // 获取图片文件夹中的所有图片
+        function loadImages() {
+            // 生成从 1.jpg 到 8.jpg 的数组
+            const imageNames = [];
+            for (let i = 1; i <= 8; i++) {
+                imageNames.push(`${i}.jpg`);
+            }
+
+            const imageContainer = document.getElementById('image-container');
+            imageContainer.innerHTML = ''; // 清空图片容器
+
+            // 添加初始段落
+            const initialParagraph = document.createElement('p');
+            initialParagraph.textContent = '说到中国的人体艺术模特，张筱雨的名字不可或缺。作为最早公开挑战人体摄影的模特之一，她的作品引发了极大的争议和关注。无论是在山顶、湖边，还是在浴室中全裸出镜，张筱雨都以其大胆和从容展现出了人体之美。她与摄影师范学辉的合作掀起了一股讨论潮流，作品《山顶全裸露出》、《湖边全裸露出》及《浴室洗澡写真》成为了中国人体艺术史上的标志性作品。张筱雨的外貌充满了东方女性的清纯与柔美，她的面容白皙如玉，五官精致，散发着一种天然的优雅。她那双明亮的大眼睛中流露出一种坚定与自信，而唇边微微的笑意则带着几分清纯与温婉。在镜头下，张筱雨无论是静止还是动作，都是一种无言的艺术表达，带给人视觉和心灵的冲击。';
+            imageContainer.appendChild(initialParagraph);
+
+            // 定义段落内容数组
+            const paragraphContents = [
+                '张筱雨的身材匀称而修长，线条优美，尤其是她那纤细的腰肢和柔滑的肌肤更是成为了她拍摄人体艺术作品的最佳亮点。她的胸部饱满而自然，在拍摄中毫不掩饰地展现出她身体的每一个细节。她的曲线优美，从肩部到腰部再到双腿，每一处都散发着柔和而自然的美感。她的皮肤白皙如瓷，似乎在阳光或水光的映衬下泛着一层淡淡的光泽。在山顶全裸露出的作品中，张筱雨站立在苍茫大地之上，面对自然，她毫无保留地展现出她的身体，自信且从容。她的每一个姿态都充满了对大自然的敬畏和融合。在湖边的全裸摄影中，张筱雨的身体与自然景色融为一体，水波的轻轻拍打让她的每一个动作显得格外柔美。',
+                '',
+                '',
+                '在浴室洗澡的写真视频中，张筱雨仿佛将观众带入了一场静谧的个人仪式，水珠滑落在她的肌肤上，镜头捕捉到了她在浴缸中最放松和自然的状态，展现出了无与伦比的艺术感染力。她的作品，无论是山顶的壮丽露出，还是浴室中的静谧写真，都展现出了她对艺术的执着与追求。虽然她的作品没有成功引领大众走向更多的开放与理解，但她无疑为中国的人体艺术留下了不可磨灭的印记。'
+            ];
+
+            // 添加图片和中间段落
+            imageNames.forEach((imageName, index) => {
+                const img = document.createElement('img');
+                img.src = imageFolderPath + imageName;
+                img.alt = imageName;
+                imageContainer.appendChild(img);
+
+                // 在每两张图片后插入一个段落
+                if ((index + 1) % 2 === 0 && paragraphContents[Math.floor(index / 2)]) {
+                    const paragraph = document.createElement('p');
+                    paragraph.textContent = paragraphContents[Math.floor(index / 2)];
+                    imageContainer.appendChild(paragraph);
+                }
+            });
+        }
+
+        // 页面加载完成后调用 loadImages 函数
+        window.onload = loadImages;
+
+    </script>
+</body>
+
+</html>

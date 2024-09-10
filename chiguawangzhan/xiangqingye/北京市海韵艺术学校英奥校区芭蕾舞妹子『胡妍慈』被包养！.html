@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>详情页</title>
+    <style>
+        /* 全局样式 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        /* 头部样式 */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 10px 20px;
+            background-color: #f8f8f8;
+            border-bottom: 1px solid #ddd;
+
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* 主要内容样式 */
+        main {
+            width: 80%;
+            max-width: 800px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        main h2 {
+            margin-bottom: 20px;
+        }
+
+        main p {
+            text-indent: 2em;
+            /* 段落首行缩进2个字符 */
+            margin-bottom: 20px;
+        }
+
+        /* 图片容器样式 */
+        #image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #image-container img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        /* 视频样式 */
+        video {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* 底部信息样式 */
+        footer {
+            width: 100%;
+            padding: 10px 20px;
+            background-color: #f8f8f8;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        /* 媒体查询，用于手机自适应 */
+        @media (max-width: 600px) {
+            header {
+                flex-direction: row;
+                /* 水平排列 */
+                justify-content: space-between;
+                /* 左右对齐 */
+                align-items: center;
+            }
+
+            nav ul {
+                margin-top: 0;
+                /* 去掉顶部间距 */
+                flex-direction: row;
+                /* 水平排列 */
+            }
+
+            nav ul li {
+                margin: 0 10px;
+                /* 左右间距 */
+            }
+
+            main {
+                width: 95%;
+                /* 进一步调整主要内容宽度 */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>吃瓜网站</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="#">分类</a></li>
+                <li><a href="#">用户中心</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="detail-page">
+            <h2>北京市海韵艺术学校英奥校区芭蕾舞妹子『胡妍慈』被包养！</h2>
+
+            <div id="image-container">
+                <!-- 图片和段落将通过JavaScript动态加载 -->
+            </div>
+            <video controls>
+                <source src="../image/北京市海韵艺术学校英奥校区芭蕾舞妹子『胡妍慈』被包养！/9.7  2701.mp4" type="video/mp4">
+            </video>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright © 2021 吃瓜网站</p>
+        <p><a href="#">隐私条款</a> | <a href="#">使用条款</a></p>
+        <p>联系我们：<a href="mailto:<EMAIL>">
+                <a>
+                </a></a>
+        <p>粤ICP备2021005979号-1</p>
+    </footer>
+
+    <script>
+        const imageFolderPath = '../image/北京市海韵艺术学校英奥校区芭蕾舞妹子『胡妍慈』被包养！/';
+
+        // 获取图片文件夹中的所有图片
+        function loadImages() {
+            // 生成从 1.jpg 到 8.jpg 的数组
+            const imageNames = [];
+            for (let i = 1; i <= 7; i++) {
+                imageNames.push(`${i}.jpg`);
+            }
+
+            const imageContainer = document.getElementById('image-container');
+            imageContainer.innerHTML = ''; // 清空图片容器
+
+            // 添加初始段落
+            const initialParagraph = document.createElement('p');
+            initialParagraph.textContent = '北京市海韵艺术学校英奥校区芭蕾舞妹子『胡妍慈』被包养！金主定制完美身材裸舞！偷拍女舞伴换衣视频曝光！';
+            imageContainer.appendChild(initialParagraph);
+
+            // 定义段落内容数组
+            const paragraphContents = [
+                '北京市海韵艺术学校英奥校区芭蕾舞妹子胡妍慈被包养，她的优雅与美丽结合在一起，展现出了令人惊叹的完美身材。胡妍慈不仅在金主的定制要求下裸舞展示身材，还将日常练习中的画面记录了下来，包括她的自慰玉足片段，展现了她纤细优美的腿部线条以及玉足的美感。更为大胆的是，她时不时还偷拍女舞伴换衣的视频，将私人空间的神秘与性感完美结合，令人难以抗拒。胡妍慈容貌清秀，脸上带着一丝典雅与纯真。她的眼神清澈，眉目间透露出一种艺术气质，薄薄的嘴唇微微抿起，显得格外娇俏。她那一头乌黑的长发随意披散，却不失美感，柔软的发丝随着她的舞姿轻轻摇曳，宛如跳动的黑色丝带。她的肌肤如牛奶般白嫩光滑，透着一种自然的光泽，每一个动作都散发出芭蕾舞者独特的优雅与韧性。',
+                '作为一名芭蕾舞者，胡妍慈的身材无可挑剔。纤细修长的双腿犹如雕刻般完美，腰肢细得几乎一手可握，背部的线条流畅而优美，肩膀圆润却不失力量感。在金主定制的裸舞展示中，她将每一个芭蕾舞动作完美地诠释，身体的每一处细节都得到了极致展现。她的胸部虽小巧但紧致，配合着柔软的腰部和完美的腿部曲线，整个身体如同一件艺术品般迷人。而在自慰玉足视频中，她那洁白如玉的脚趾修长而精致，伴随着轻轻的动作，展现出了芭蕾舞者独有的足部魅力。',
+                '',
+                '视频中，胡妍慈优雅地展现她的舞姿，每一个动作都带着一种高贵的美感，特别是在裸舞片段中，她的身体随着音乐优雅地旋转，展现出了芭蕾舞者独有的气质。她的自慰玉足视频中，轻抚自己完美的双足，动作轻柔且带有挑逗性，让观众不禁沉浸其中。更为大胆的是，她时常会偷拍女舞伴在后台换衣服的片段，镜头中的舞伴们毫无防备，展现出最真实的身体状态，这些视频不仅展现了她们的身材，更让人感受到私密空间中的禁忌感。'
+            ];
+
+            // 添加图片和中间段落
+            imageNames.forEach((imageName, index) => {
+                const img = document.createElement('img');
+                img.src = imageFolderPath + imageName;
+                img.alt = imageName;
+                imageContainer.appendChild(img);
+
+                // 在每两张图片后插入一个段落
+                if ((index + 1) % 2 === 0 && paragraphContents[Math.floor(index / 2)]) {
+                    const paragraph = document.createElement('p');
+                    paragraph.textContent = paragraphContents[Math.floor(index / 2)];
+                    imageContainer.appendChild(paragraph);
+                }
+            });
+        }
+
+        // 页面加载完成后调用 loadImages 函数
+        window.onload = loadImages;
+
+    </script>
+</body>
+
+</html>
