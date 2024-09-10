@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const end = start + itemsPerPage;
 
         for (let i = start; i < end; i++) {
-            if (i >= totalItems) break;
+            // if (i >= totalItems) break;
             const item = document.createElement('a');
             item.href = images[i].link;
             item.className = 'grid-item';
@@ -138,7 +138,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function updateButtons() {
         prevPageButton.disabled = currentPage === 1;
-        nextPageButton.disabled = currentPage === totalPages;
+        // nextPageButton.disabled = currentPage === totalPages;
+
+        nextPageButton.disabled = currentPage === Math.ceil(filteredImages.length / itemsPerPage);
     }
 
 searchButton.addEventListener('click', () => {
